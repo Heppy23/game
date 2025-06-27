@@ -1,60 +1,62 @@
 import { useState, useEffect } from "react";
 
-// Define the cards (without color)
 const allCards = [
   {
     id: 1,
-    description: "Write me a short, sweet message that you'd whisper if I was lying next to you right now.",
+    description: "Plan a Movie Date 🎬 — You pick the movie, I’ll pick the vibe (snacks, lighting, cuddles or distance).",
     isSpecial: false
   },
   {
     id: 2,
-    description: "Romantic Audio 🎧 — Record a 30-second voice note telling me something you love about me. Extra points if it's cheeky.",
+    description: "Small Surprise 🛍️ — Buy or make me something small this week and don’t tell me until it’s done.",
     isSpecial: false
   },
   {
     id: 3,
-    description: "Emoji Fantasy 🧠📲 — Describe your last naughty thought about me using only emojis. I’ll try to guess what it means.",
-    isSpecial: true
-  },
-  {
-    id: 4,
-    description: "Midnight Dare 🌙 — I give you a fun or naughty dare right now. You must complete it before bed, no excuses.",
-    isSpecial: true
-  },
-  {
-    id: 5,
-    description: "Picture Roulette 📸 — Take a photo of something soft, something warm, and something naughty. Send all three.",
+    description: "Playlist Swap 🎧 — Share a 3-song playlist that captures how you feel about me lately.",
     isSpecial: false
   },
   {
+    id: 4,
+    description: "Memory Builder 📷 — Take a photo of something you’d want to share with me if I were there.",
+    isSpecial: false
+  },
+  {
+    id: 5,
+    description: "Next-Date Dream ☕ — Describe our next date like a romantic scene in a movie. Go all out.",
+    isSpecial: true
+  },
+  {
     id: 6,
-    description: "Strip One 😳 — You remove one item of inner clothing (your choice). Send a hint, not a reveal. Let me imagine the rest.",
+    description: "Voice Flirt 🎙️ — Send a voice note where you try to flirt with me in your most charming tone.",
     isSpecial: true
   },
   {
     id: 7,
-    description: "Fantasy Builder 🔥 — Text me a detailed, step-by-step plan of what you'd do to me if we had one uninterrupted night.",
-    isSpecial: true
+    description: "EXTREME: Video Position Tour 📹 — (No nudity needed) Fully dressed, use pillows or the bed to act out 3 positions you want us to try. Describe each one in detail like you're tempting me into it.",
+    isSpecial: true,
+    isExtreme: true
   },
   {
     id: 8,
-    description: "Voice Tease 🎤 — Say something completely filthy you'd whisper into my ear. No holding back. One take. Send.",
-    isSpecial: true
+    description: "EXTREME: Mirror Session 🔥 — Strip alone, sit in front of a mirror, and describe in audio what you’d want me to do if I were there.",
+    isSpecial: true,
+    isExtreme: true
   },
   {
     id: 9,
-    description: "EXTREME: I want to hear you lose control. Record the moment you finish while moaning my name. Or fake it flawlessly. 😈",
+    description: "EXTREME: Voice-Over Fantasy 🎤 — Imagine you're riding me slowly. Record a voice note where you whisper what you're doing to me in real-time, like an erotic voice-over.",
     isSpecial: true,
     isExtreme: true
   },
   {
     id: 10,
-    description: "EXTREME: Strip fully, sit in front of the mirror, and describe out loud what you see and what you'd do to me if I was there. 🔥",
+    description: "Pick a song that makes you feel sexy. Dance like I’m watching. Record a short clip. No rules — just you, the rhythm, and the mood.Let your body move and show me how you feel.",
     isSpecial: true,
-    isExtreme: true
   }
+  
 ];
+
 
 const getRandomColor = () => {
   const palette = ['#f43f5e', '#10b981', '#f59e0b', '#6366f1', '#e879f9', '#06b6d4', '#f97316', '#84cc16', '#ec4899', '#3b82f6'];
